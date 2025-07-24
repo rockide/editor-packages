@@ -58,7 +58,14 @@
 							"type": "object",
 							"patternProperties": {
 								".*": {
-									"$ref": "../general/vanilla/material.json"
+									"anyOf": [
+										{
+											"type": "string"
+										},
+										{
+											"$ref": "../general/vanilla/material.json"
+										}
+									]
 								}
 							}
 						},
