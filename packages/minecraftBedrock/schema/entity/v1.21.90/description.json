@@ -100,13 +100,12 @@
 								"client_sync": {
 									"title": "Client Sync",
 									"description": "Defaults to false, allows the property to be queried on the client.",
-									"type": "boolean",
-									"default": false
+									"type": "boolean"
 								},
 								"default": {
 									"title": "Default",
 									"description": "The default value of the property, supports a boolean value or a molang string.",
-									"$ref": "../../molang/embedded.json"
+									"type": ["boolean", "string"]
 								}
 							}
 						},
@@ -119,13 +118,12 @@
 								"client_sync": {
 									"title": "Client Sync",
 									"description": "Defaults to false, allows the property to be queried on the client.",
-									"type": "boolean",
-									"default": false
+									"type": "boolean"
 								},
 								"default": {
 									"title": "Default",
 									"description": "The default value of the property, supports an integer value or a molang string.",
-									"$ref": "../../molang/embedded.json"
+									"type": ["integer", "string"]
 								},
 								"range": {
 									"title": "Range",
@@ -135,7 +133,8 @@
 										"type": "integer"
 									},
 									"minItems": 2,
-									"maxItems": 2
+									"maxItems": 2,
+									"uniqueItems": true
 								}
 							}
 						},
@@ -148,13 +147,12 @@
 								"client_sync": {
 									"title": "Client Sync",
 									"description": "Defaults to false, allows the property to be queried on the client.",
-									"type": "boolean",
-									"default": false
+									"type": "boolean"
 								},
 								"default": {
 									"title": "Default",
 									"description": "The default value of the property, supports a float value or a molang string.",
-									"$ref": "../../molang/embedded.json"
+									"type": ["number", "string"]
 								},
 								"range": {
 									"title": "Range",
@@ -164,7 +162,8 @@
 										"type": "number"
 									},
 									"minItems": 2,
-									"maxItems": 2
+									"maxItems": 2,
+									"uniqueItems": true
 								}
 							}
 						},
@@ -177,13 +176,12 @@
 								"client_sync": {
 									"title": "Client Sync",
 									"description": "Defaults to false, allows the property to be queried on the client.",
-									"type": "boolean",
-									"default": false
+									"type": "boolean"
 								},
 								"default": {
 									"title": "Default",
 									"description": "The default value of the property, supports an enum value or a molang string.",
-									"$ref": "../../molang/embedded.json"
+									"type": "string"
 								},
 								"values": {
 									"title": "Values",
@@ -192,7 +190,8 @@
 									"items": {
 										"type": "string"
 									},
-									"minItems": 1
+									"minItems": 1,
+									"uniqueItems": true
 								}
 							}
 						}
