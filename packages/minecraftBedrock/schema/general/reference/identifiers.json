@@ -33,9 +33,6 @@
 					"$ref": "../vanilla/identifiers.json#/definitions/prefixed_entity_identifiers"
 				},
 				{
-					"$ref": "../vanilla/identifiers.json#/definitions/unprefixed_entity_identifiers"
-				},
-				{
 					"$ref": "../../entity/dynamic/identifierEnum.json"
 				},
 				{
@@ -58,9 +55,6 @@
 			"anyOf": [
 				{
 					"$ref": "../vanilla/identifiers.json#/definitions/prefixed_block_identifiers"
-				},
-				{
-					"$ref": "../vanilla/identifiers.json#/definitions/unprefixed_block_identifiers"
 				},
 				{
 					"$ref": "../../block/dynamic/identifierEnum.json"
@@ -87,9 +81,6 @@
 			"anyOf": [
 				{
 					"$ref": "../vanilla/identifiers.json#/definitions/prefixed_item_identifiers"
-				},
-				{
-					"$ref": "../vanilla/identifiers.json#/definitions/unprefixed_item_identifiers"
 				},
 				{
 					"$ref": "../../item/dynamic/identifierEnum.json"
