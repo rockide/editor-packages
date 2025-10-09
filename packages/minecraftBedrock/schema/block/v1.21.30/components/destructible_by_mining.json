@@ -57,17 +57,7 @@
 					"type": "object",
 					"properties": {
 						"tags": {
-							"oneOf": [
-								{
-									"enum": [
-										"query.any_tag()",
-										"query.all_tags()"
-									]
-								},
-								{
-									"type": "string"
-								}
-							]
+							"type": "string"
 						}
 					}
 				}

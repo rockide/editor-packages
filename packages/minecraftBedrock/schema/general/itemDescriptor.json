@@ -9,17 +9,7 @@
             "properties": {
                 "tags": {
                     "title": "Tags",
-                    "oneOf": [
-                        {
-                            "enum": [
-                                "query.any_tag()",
-                                "query.all_tags()"
-                            ]
-                        },
-                        {
-                            "type": "string"
-                        }
-                    ]
+                    "type": "string"
                 }
             }
         }

@@ -117,17 +117,7 @@
 								"properties": {
 									"tags": {
 										"title": "Tags",
-										"anyOf": [
-											{
-												"type": "string"
-											},
-											{
-												"enum": [
-													"query.any_tag()",
-													"query.all_tags()"
-												]
-											}
-										]
+										"type": "string"
 									}
 								}
 							}

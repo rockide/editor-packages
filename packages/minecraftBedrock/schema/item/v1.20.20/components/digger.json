@@ -26,17 +26,7 @@
 								"additionalProperties": false,
 								"properties": {
 									"tags": {
-										"anyOf": [
-											{
-												"enum": [
-													"query.any_tag()",
-													"query.all_tags()"
-												]
-											},
-											{
-												"type": "string"
-											}
-										]
+										"type": "string"
 									}
 								}
 							}
