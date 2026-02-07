@@ -181,12 +181,16 @@
 								"anyOf": [
 									{
 										"type": "object",
-										"propertyNames": {
-											"$ref": "../../general/reference/renderController.json"
+										"if": {
+											"not": {
+												"propertyNames": {
+													"pattern": "^controller\\.render\\..+$"
+												}
+											}
 										},
-										"patternProperties": {
-											".+": {
-												"$ref": "../../molang/embedded.json"
+										"then": {
+											"propertyNames": {
+												"$ref": "../../general/vanilla/renderController.json"
 											}
 										}
 									},
