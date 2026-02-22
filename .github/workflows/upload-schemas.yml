@@ -1,0 +1,32 @@
+name: Upload Schemas
+
+on:
+    workflow_dispatch:
+
+jobs:
+    upload:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            - name: Checkout Packages 🛎
+              uses: actions/checkout@v4
+
+            - name: Set release tag 📅
+              id: tag
+              run: echo "tag=$(date +'%Y.%m.%d')" >> "$GITHUB_OUTPUT"
+
+            - name: Delete existing release 🗑️
+              run: gh release delete "${{ steps.tag.outputs.tag }}" --cleanup-tag -y || true
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Create schemas.tar.gz 📦
+              run: tar -czf schemas.tar.gz -C packages/minecraftBedrock/schema .
+
+            - name: Create Release & Upload 🚀
+              uses: softprops/action-gh-release@v2
+              with:
+                  tag_name: ${{ steps.tag.outputs.tag }}
+                  name: Schemas ${{ steps.tag.outputs.tag }}
+                  files: schemas.tar.gz
