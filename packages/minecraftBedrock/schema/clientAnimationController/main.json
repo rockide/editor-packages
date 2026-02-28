@@ -1,6 +1,21 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema",
 	"title": "Client Animation Controller",
+	"defaultSnippets": [
+		{
+			"label": "New animation controller",
+			"body": {
+				"format_version": "${1:1.10.0}",
+				"animation_controllers": {
+					"controller.animation.$2.${3:${TM_FILENAME/[\\.].*//}}": {
+						"states": {
+							"default": "^{$4}"
+						}
+					}
+				}
+			}
+		}
+	],
 	"required": ["format_version", "animation_controllers"],
 	"type": "object",
 	"properties": {
