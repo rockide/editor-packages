@@ -253,6 +253,11 @@
 									}
 								]
 							}
+						},
+						"held_item_ignores_lighting": {
+							"title": "Held Item Ignores Lighting",
+							"description": "This determines if the item held by an entity should render fully lit up (if true), or depending on surrounding lighting.",
+							"type": "boolean"
 						}
 					}
 				}
