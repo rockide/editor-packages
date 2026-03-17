@@ -1,6 +1,21 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema",
 	"title": "Render Controller",
+	"defaultSnippets": [
+		{
+			"label": "New render controller",
+			"body": {
+				"format_version": "${1:1.10.0}",
+				"render_controllers": {
+					"controller.render.$2.${3:${TM_FILENAME/[\\.].*//}}": {
+						"geometry": "Geometry.${4:default}",
+						"materials": [{ "*": "Material.${5:default}" }],
+						"textures": ["Texture.${6:default}"]
+					}
+				}
+			}
+		}
+	],
 	"required": ["format_version", "render_controllers"],
 	"type": "object",
 	"allOf": [

@@ -1,6 +1,25 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema",
 	"title": "Item",
+	"defaultSnippets": [
+		{
+			"label": "New item",
+			"body": {
+				"format_version": "${1:1.21.130}",
+				"minecraft:item": {
+					"description": {
+						"identifier": "$2:${3:${TM_FILENAME/[\\.].*//}}",
+						"menu_category": {
+							"category": "${4:items}"
+						}
+					},
+					"components": {
+						"minecraft:icon": "$2:${3:${TM_FILENAME/[\\.].*//}}"
+					}
+				}
+			}
+		}
+	],
 	"type": "object",
 	"required": [
 		"format_version",
